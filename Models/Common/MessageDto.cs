@@ -1,4 +1,4 @@
-namespace BackendSan.Models.Responses;
+namespace BackendSan.Models.Common;
 
 public class MessageDto
 {

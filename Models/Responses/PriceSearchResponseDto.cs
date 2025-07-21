@@ -22,7 +22,7 @@ namespace BackendSan.Models.Responses
 
     public class PSHotelDto : BaseHotelDto
     {
-        public List<FacilitiesDTO> Facilities { get; set; }
+        public List<FacilityDto> Facilities { get; set; }
         public PSLocationDto Location { get; set; }
         public CountryDTO Country { get; set; }
         public PSCityDto City { get; set; }
@@ -36,6 +36,8 @@ namespace BackendSan.Models.Responses
         public string OriginalName { get; set; }
         public bool HasThirdPartyOwnOffer { get; set; } // true if the hotel has an own offer from a third party channel manager
         public string Code { get; set; }
+        public bool HasChannelManagerOffer { get; set; }
+        public int Provider { get; set; }
     }
     public class BadgeDTO
     {
@@ -43,13 +45,6 @@ namespace BackendSan.Models.Responses
         public string name { get; set; }
     }
     
-    public class FacilitiesDTO
-    {
-        public bool isPriced { get; set; }
-        public string id { get; set; }
-        public string name { get; set; }
-    }
-   
     public class  PSLocationDto : BaseLocationDto
     {
         public string CountryId { get; set; }

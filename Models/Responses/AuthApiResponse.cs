@@ -1,4 +1,5 @@
 ﻿using System;
+using BackendSan.Models.Common;
 using BackendSan.Models.Responses;
 
 namespace BackendSan.Models.Response

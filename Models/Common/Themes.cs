@@ -1,4 +1,4 @@
-namespace BackendSan.Controllers;
+namespace BackendSan.Models.Common;
 
 public class Themes
 {

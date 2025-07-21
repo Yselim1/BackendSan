@@ -17,4 +17,11 @@ public class OffersController : BaseApiController
         var result = await Forward<GetOffersResponseDto>("productservice/getoffers", request);
         return result;
     }
+    
+    [HttpPost("getofferdetails")]
+    public async Task<IActionResult> GetOffers([FromBody] GetOfferDetailsRequestDyo request)
+    {
+        var result = await Forward<GetOfferDetailsResponseDto>("productservice/getofferdetails", request);
+        return result;
+    }
 }

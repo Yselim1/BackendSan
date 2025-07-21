@@ -1,5 +1,6 @@
 using System;
 using BackendSan.Models;
+using BackendSan.Models.Common;
 
 namespace BackendSan.Models.Responses
 {
