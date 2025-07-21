@@ -1,3 +1,5 @@
+using BackendSan.Models.Common;
+
 namespace BackendSan.Models.Responses;
 
 public class NationalitiesResponseDto

@@ -27,12 +27,6 @@ public class GORoomDto : BaseRoomDto
     public string RoomInfoId { get; set; }
 }
 
-public class ThirdPartyInformationDto
-{
-    public List<object> Infos { get; set; }
-}
-
-
 
 public class PriceBreakdownGroupDto
 {
@@ -40,10 +34,5 @@ public class PriceBreakdownGroupDto
     public List<PriceBreakdownDto> PriceBreakdowns { get; set; }
 }
 
-public class PriceBreakdownDto
-{
-    public string RoomNumber { get; set; }
-    public DateTime Date { get; set; }
-    public PriceDto Price { get; set; }
-}
+
 

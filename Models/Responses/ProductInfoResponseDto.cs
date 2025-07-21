@@ -29,32 +29,8 @@ public class PIHotelDto : BaseHotelDto
     public BaseLocationDto Location { get; set; }
     public BaseLocationDto Country { get; set; }
     public BaseLocationDto City { get; set; }
-}
-
-public class SeasonDto
-{
-    public string Name { get; set; }
-    public List<TextCategoryDto> TextCategories { get; set; }
-    public List<MediaFileDto> MediaFiles { get; set; }
-}
-
-public class TextCategoryDto
-{
-    public string Name { get; set; }
-    public List<PresentationDto> Presentations { get; set; }
-}
-
-public class PresentationDto
-{
-    public int TextType { get; set; }
-    public string Text { get; set; }
-}
-
-public class MediaFileDto
-{
-    public int FileType { get; set; }
-    public string Url { get; set; }
-    public string UrlFull { get; set; }
+    public bool HasChannelManagerOffer { get; set; }
+    public int Provider { get; set; }
 }
 
 public class AddressDto
