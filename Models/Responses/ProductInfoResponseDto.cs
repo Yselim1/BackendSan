@@ -1,5 +1,9 @@
+using BackendSan.Controllers;
+using BackendSan.Models.Common;
+
 namespace BackendSan.Models.Responses;
 
+//PI - ProductInfo
 public class ProductInfoResponseDto
 {
     public ProductInfoBodyDto Body { get; set; }
@@ -8,11 +12,11 @@ public class ProductInfoResponseDto
 
 public class ProductInfoBodyDto
 {
-    public HotelDto Hotel { get; set; }
+    public PIHotelDto Hotel { get; set; }
 }
 
 
-public class HotelDto
+public class PIHotelDto : BaseHotelDto
 {
     public List<SeasonDto> Seasons { get; set; }
     public AddressDto Address { get; set; }
@@ -22,21 +26,9 @@ public class HotelDto
     public int StopSaleGuaranteed { get; set; }
     public int StopSaleStandart { get; set; }
     public List<object> Handicaps { get; set; }
-    public GeoLocationDto Geolocation { get; set; }
-    public double Stars { get; set; }
-    public double Rating { get; set; }
-    public List<object> Themes { get; set; }
-    public LocationDto Location { get; set; }
-    public LocationDto Country { get; set; }
-    public LocationDto City { get; set; }
-    public HotelCategoryDto HotelCategory { get; set; }
-    public bool HasChannelManagerOffer { get; set; }
-    public int Provider { get; set; }
-    public string Thumbnail { get; set; }
-    public string ThumbnailFull { get; set; }
-    public DescriptionDto Description { get; set; }
-    public string Id { get; set; }
-    public string Name { get; set; }
+    public BaseLocationDto Location { get; set; }
+    public BaseLocationDto Country { get; set; }
+    public BaseLocationDto City { get; set; }
 }
 
 public class SeasonDto
@@ -67,44 +59,14 @@ public class MediaFileDto
 
 public class AddressDto
 {
-    public CityDto City { get; set; }
+    public BaseCityDto City { get; set; }
     public List<string> AddressLines { get; set; }
     public GeoLocationDto Geolocation { get; set; }
 }
 
-public class CityDto
-{
-    public string Name { get; set; }
-    public int Provider { get; set; }
-    public bool IsTopRegion { get; set; }
-    public bool OwnLocation { get; set; }
-}
 
-public class GeoLocationDto
-{
-    public string Longitude { get; set; }
-    public string Latitude { get; set; }
-}
 
-public class DescriptionDto
-{
-    public string Text { get; set; }
-}
 
-public class HotelCategoryDto
-{
-    public string Name { get; set; }
-    public string Id { get; set; }
-    public string Code { get; set; }
-}
 
-public class LocationDto
-{
-    public string Name { get; set; }
-    public string Latitude { get; set; }
-    public string Longitude { get; set; }
-    public int Provider { get; set; }
-    public bool IsTopRegion { get; set; }
-    public bool OwnLocation { get; set; }
-    public string Id { get; set; }
-}
+
+

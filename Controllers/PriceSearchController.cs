@@ -24,16 +24,16 @@ namespace BackendSan.Controllers
             {
                 if (dto.Body?.hotels != null)
                 {
-                    var hotelsToKeep = new List<HotelDTO>();
-                    foreach (var hotel in dto.Body?.hotels ?? new List<HotelDTO>())
+                    var hotelsToKeep = new List<PSHotelDto>();
+                    foreach (var hotel in dto.Body?.hotels ?? new List<PSHotelDto>())
                     {
-                        if (hotel.provider != 0 && hotel.provider != 1) 
+                        if (hotel.Provider != 0 && hotel.Provider != 1) 
                         {
-                            if (hotel.description != null && !string.IsNullOrEmpty(hotel.description.text))
+                            if (hotel.Description != null && !string.IsNullOrEmpty(hotel.Description.Text))
                             {
                                 // Remove HTML tags from the hotel description
-                                hotel.description.text = RemoveHtmlTags(hotel.description.text);
-                                hotel.description.text = hotel.description.text.Trim();
+                                hotel.Description.Text = RemoveHtmlTags(hotel.Description.Text);
+                                hotel.Description.Text = hotel.Description.Text.Trim();
                             }
                             hotelsToKeep.Add(hotel); 
                         }
@@ -54,17 +54,17 @@ namespace BackendSan.Controllers
             {
                 if (dto.Body?.hotels != null)
                 {
-                    var hotelsToKeep = new List<HotelDTO>();
+                    var hotelsToKeep = new List<PSHotelDto>();
 
-                    foreach (var hotel in dto.Body?.hotels ?? new List<HotelDTO>())
+                    foreach (var hotel in dto.Body?.hotels ?? new List<PSHotelDto>())
                     {
-                        if (hotel.provider != 0 && hotel.provider != 1) 
+                        if (hotel.Provider != 0 && hotel.Provider != 1) 
                         {
-                            if (hotel.description != null && !string.IsNullOrEmpty(hotel.description.text))
+                            if (hotel.Description != null && !string.IsNullOrEmpty(hotel.Description.Text))
                             {
                                 // Remove HTML tags from the hotel description
-                                hotel.description.text = RemoveHtmlTags(hotel.description.text);
-                                hotel.description.text = hotel.description.text.Trim();
+                                hotel.Description.Text = RemoveHtmlTags(hotel.Description.Text);
+                                hotel.Description.Text = hotel.Description.Text.Trim();
                             }
                             hotelsToKeep.Add(hotel); 
 
