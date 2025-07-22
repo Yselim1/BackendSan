@@ -23,7 +23,7 @@ public class OfferDetailDto
     public int Availability { get; set; }
     public bool IsRefundable { get; set; }
     public bool IsSpecial { get; set; }
-    public string Notes { get; set; }
+    public string? Notes { get; set; }
     public PriceDto Price { get; set; }
     public List<CancellationPolicyDto> CancellationPolicies { get; set; }
     public List<PriceBreakdownDto> PriceBreakdowns { get; set; }
@@ -42,9 +42,9 @@ public class GODHotelDto : BaseHotelDto
     public List<RoomDetailDto> Rooms { get; set; }
     public List<OfferInHotelDto> Offers { get; set; }
     public GODAddressDto Address { get; set; }
-    public string FaxNumber { get; set; }
-    public string PhoneNumber { get; set; }
-    public string HomePage { get; set; }
+    public string? FaxNumber { get; set; }
+    public string? PhoneNumber { get; set; }
+    public string? HomePage { get; set; }
     public int StopSaleGuaranteed { get; set; }
     public int StopSaleStandart { get; set; }
     public List<object> Handicaps { get; set; } = new List<object>();
@@ -79,7 +79,7 @@ public class RoomDetailDto
     public string Id { get; set; }
     public string Name { get; set; }
     public string RoomSize { get; set; }
-    public string MaxAdult { get; set; } // Consider int if API guarantees it's numeric
+    public string MaxAdult { get; set; } 
     public List<string> BedOptions { get; set; }
     public List<PresentationDto> Presentations { get; set; }
     public List<FacilityDto> Facilities { get; set; }
