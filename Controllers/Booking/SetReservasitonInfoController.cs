@@ -13,7 +13,7 @@ public class SetReservasitonInfoController : BaseApiController
     {
     }
     
-    [HttpPost("setreservasitoninfo")]
+    [HttpPost("setreservationinfo")]
     public async Task<IActionResult> SetReservationInfo([FromBody] SetReservationInfoRequest request)
     {
         var result = await Forward<SetReservationInfoResponse>("bookingservice/setreservationinfo", request);
