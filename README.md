@@ -1,0 +1,13 @@
+# BackendSan (.NET 8 API)
+
+This project builds a Docker image hosted on [Docker Hub](https://hub.docker.com/repository/docker/phantosys/backendsan).
+
+## 🔧 How to Run the Docker Image
+
+```bash
+docker run -p 5045:5045 \
+  -e "TargetApi__BaseUrl=https://api.example.com" \
+  -e "TargetApi__User=myuser" \
+  -e "TargetApi__Password=secret" \
+  -e "TargetApi__Agency=abc" \
+  phantosys/backendsan:latest
