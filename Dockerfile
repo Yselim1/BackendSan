@@ -1,4 +1,4 @@
-FROM ubuntu 
+FROM ubuntu
 
-RUN apt-get update 
-CMD [“echo”,”Image created”] 
+RUN apt-get update
+CMD ["echo", "Image created"]
