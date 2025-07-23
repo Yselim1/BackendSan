@@ -25,4 +25,4 @@ jobs:
       with:
        context: .
        push: true
-       tags: Yselim1/githubaction:latest
+       tags: phantosys/backendsan:latest
