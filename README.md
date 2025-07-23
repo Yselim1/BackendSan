@@ -11,3 +11,7 @@ docker run -p 5045:5045 \
   -e "TargetApi__Password=secret" \
   -e "TargetApi__Agency=abc" \
   phantosys/backendsan:latest
+```
+Make sure to replace the values with your own credentials.
+
+API will be available at: http://localhost:5045
