@@ -2,7 +2,12 @@ name: Build and push Docker image to dockerhub
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
+    paths:
+      - 'src/**'
+      - 'Dockerfile'
+      - '*.csproj'
     
 jobs:
 
