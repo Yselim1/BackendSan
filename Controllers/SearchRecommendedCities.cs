@@ -33,7 +33,10 @@ namespace BackendSan.Controllers
                 if (dto.Body?.Items != null)
                 {
                     filteredHotels = dto.Body.Items.Where(item => item.Type == (int)SearchSuggestionType.Hotel)
-                        .Take(4)
+                        .ToList();
+                    filteredHotels = filteredHotels.Where(item => item.City?.Name?.ToLower() == autocompleteRequest.Query.ToLower()
+                        || item.Hotel?.Name?.ToLower() == autocompleteRequest.Query.ToLower())
+                        .Take(10)
                         .ToList();
                 }
                 
