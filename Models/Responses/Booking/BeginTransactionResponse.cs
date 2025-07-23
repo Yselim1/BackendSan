@@ -1,25 +1,11 @@
+using BackendSan.Models.Common;
+
 namespace BackendSan.Models.Responses.Booking;
 
 public class BeginTransactionResponse
 {
     public TransactionBody Body { get; set; }
-    public ResponseHeader Header { get; set; }
-}
-
-public class ResponseHeader
-{
-    public string RequestId { get; set; }
-    public bool Success { get; set; }
-    public string ResponseTime { get; set; }
-    public List<ResponseMessage> Messages { get; set; }
-}
-
-public class ResponseMessage
-{
-    public int Id { get; set; }
-    public string Code { get; set; }
-    public int MessageType { get; set; }
-    public string Message { get; set; }
+    public HeaderDto Header { get; set; }
 }
 
 public class TransactionBody
@@ -81,6 +67,8 @@ public class Nationality
 
 public class PassportInfo
 {
+    public string serial { get; set; }
+    public string number { get; set; }
     public string ExpireDate { get; set; }
     public string IssueDate { get; set; }
     public string CitizenshipCountryCode { get; set; }
@@ -88,13 +76,15 @@ public class PassportInfo
 
 public class Address
 {
-    public object ContactPhone { get; set; } // Replace with specific class if needed
+    public ContactPhone ContactPhone { get; set; } // Replace with specific class if needed
     public string Email { get; set; }
     public string AddressLine { get; set; }
     public string ZipCode { get; set; }
     public City City { get; set; }
     public Country Country { get; set; }
 }
+
+
 
 public class City
 {
