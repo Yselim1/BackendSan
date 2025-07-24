@@ -18,6 +18,7 @@ public class TravellerRequest
     public string Name { get; set; }
     public string Surname { get; set; }
     public bool IsLeader { get; set; }
+    public int Gender { get; set; }
     public DateTime BirthDate { get; set; }
     public NationalityRequest Nationality { get; set; }
     public string IdentityNumber { get; set; }
@@ -84,6 +85,7 @@ public class CustomerInfoRequest
     public string Name { get; set; }
     public string Surname { get; set; }
     public string BirthDate { get; set; }
+    public int Gender { get; set; }
     public string IdentityNumber { get; set; }
 }
 
