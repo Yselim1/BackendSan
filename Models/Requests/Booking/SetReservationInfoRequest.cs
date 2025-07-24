@@ -19,6 +19,7 @@ public class TravellerRequest
     public string Surname { get; set; }
     public bool IsLeader { get; set; }
     public DateTime BirthDate { get; set; }
+    public int? Gender { get; set; }
     public NationalityRequest Nationality { get; set; }
     public string IdentityNumber { get; set; }
     public PassportInfoRequest PassportInfo { get; set; }
