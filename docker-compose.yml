@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    image: phantosys/backendsan:latest
+    container_name: backend-app
+    ports:
+      - "5045:80"   # Change 5000 if needed to match your host port
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TargetApi__BaseUrl=${BaseUrl}
+      - TargetApi__Agency=${Agency}
+      - TargetApi__User=${User}
+      - TargetApi__Password=${Password}

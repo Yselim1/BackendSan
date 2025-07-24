@@ -15,7 +15,13 @@ builder.Services.AddMemoryCache(); // Required for IMemoryCache
 builder.Services.AddHttpClient(); // Required for IHttpClientFactory
 builder.Services.AddSingleton<TokenStore>();
 builder.Services.AddScoped<RelayService>(); 
-builder.Services.AddControllers(); 
+builder.Services.AddControllers();
+
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables(); 
 
 var app = builder.Build();
 
