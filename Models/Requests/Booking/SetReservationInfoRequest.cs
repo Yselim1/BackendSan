@@ -57,9 +57,9 @@ public class AddressRequest
 
 public class ContactPhoneRequest
 {
-    public string CountryCode { get; set; }
-    public string AreaCode { get; set; }
-    public string PhoneNumber { get; set; }
+    public string? CountryCode { get; set; }
+    public string? AreaCode { get; set; }
+    public string? PhoneNumber { get; set; }
 }
 
 public class CityRequest
