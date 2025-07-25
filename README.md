@@ -2,8 +2,7 @@
 
 This project builds a Docker image hosted on [Docker Hub](https://hub.docker.com/repository/docker/phantosys/backendsan).
 
-The backend supports the [Frontend Repo]([https://github.com/phantosys/SanTSG-Frontend](https://github.com/esra-atld/react-website.git)) built during the SAN TSG 2025 Summer Internship Program.
-
+The backend supports the [Frontend Repo](https://github.com/esra-atld/react-website.git) built during the SAN TSG 2025 Summer Internship Program.
 ## 🔧 How to Run the Docker Image
 
 ```bash
